@@ -18,7 +18,6 @@ $ScoreList = [PSCustomObject]@{
 $MyScore = 0
 $TheirScore = 0
 
-
 foreach($Round in $ListOfRounds){
     $TheirMove = $MoveDecoder.($Round.Split(' ')[0])
     $Outcome = $MoveDecoder.($Round.Split(' ')[1])
