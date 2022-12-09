@@ -15,6 +15,7 @@ for($Y=0; $Y -lt $TheField.Length; $Y++){
             $BottomToTop = $TheField | ForEach-Object {$_[$x]} | Select-Object -Last ($TheField.Length-1 - $Y)
 
             # Find Matches for each set
+            $FoundBigger = 0
             for($z=0; $z -lt $RightToLeft.Count; $z++){
                 if([int]("$($RightToLeft[$z])") -ge [int]("$($thefield[$Y][$x])")){
                     $FoundBigger++
